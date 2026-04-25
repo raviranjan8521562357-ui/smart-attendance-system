@@ -16,6 +16,36 @@ def style_background_home():
                 border: 1px solid rgba(255, 255, 255, 0.22) !important;
                 box-shadow: 0 18px 40px rgba(26, 35, 126, 0.16) !important;
             }
+
+            .stApp div[data-testid="stColumn"] div[data-testid="stMarkdownContainer"] h1,
+            .stApp div[data-testid="stColumn"] div[data-testid="stMarkdownContainer"] h2,
+            .stApp div[data-testid="stColumn"] div[data-testid="stMarkdownContainer"] h3,
+            .stApp div[data-testid="stColumn"] div[data-testid="stMarkdownContainer"] p,
+            .stApp div[data-testid="stColumn"] label,
+            .stApp div[data-testid="stColumn"] .stCaption {
+                color: #111111 !important;
+            }
+
+            .portal-card-copy {
+                min-height: 6.25rem;
+                margin-bottom: 0.25rem;
+            }
+
+            .portal-card-copy h3 {
+                margin: 0 0 0.5rem 0 !important;
+                color: #111111 !important;
+                font-size: 1.65rem !important;
+                font-weight: 800 !important;
+                line-height: 1.15 !important;
+            }
+
+            .portal-card-copy p {
+                margin: 0 !important;
+                color: #333333 !important;
+                font-size: 1rem !important;
+                font-weight: 500 !important;
+                line-height: 1.5 !important;
+            }
         </style>
         """,
         unsafe_allow_html=True,
@@ -64,6 +94,14 @@ def style_base_layout():
                 color: var(--sat-text) !important;
             }
 
+            .stApp,
+            .stApp p,
+            .stApp li,
+            .stApp label,
+            .stApp span:not([data-testid="stIconMaterial"]) {
+                color: var(--sat-text) !important;
+            }
+
             .block-container {
                 padding-top: 1.5rem !important;
                 padding-bottom: 2rem !important;
@@ -93,6 +131,21 @@ def style_base_layout():
                 letter-spacing: -0.01em !important;
             }
 
+            div[data-testid="stHeading"] h1,
+            div[data-testid="stHeading"] h2,
+            div[data-testid="stHeading"] h3,
+            div[data-testid="stHeading"] h4,
+            div[data-testid="stHeading"] h5,
+            div[data-testid="stHeading"] h6,
+            div[data-testid="stMarkdownContainer"] h1,
+            div[data-testid="stMarkdownContainer"] h2,
+            div[data-testid="stMarkdownContainer"] h3,
+            div[data-testid="stMarkdownContainer"] h4,
+            div[data-testid="stMarkdownContainer"] h5,
+            div[data-testid="stMarkdownContainer"] h6 {
+                color: var(--sat-text) !important;
+            }
+
             p, li, div[data-testid="stMarkdownContainer"] p, div[data-testid="stMarkdownContainer"] li {
                 color: var(--sat-text-secondary) !important;
                 line-height: 1.5 !important;
@@ -118,6 +171,10 @@ def style_base_layout():
                 color: var(--sat-label) !important;
             }
 
+            .stMarkdown, .stText, .stCaptionContainer {
+                color: var(--sat-text-secondary) !important;
+            }
+
             hr, .stDivider {
                 border-color: rgba(45, 42, 114, 0.12) !important;
             }
@@ -131,12 +188,15 @@ def style_base_layout():
 
             div[data-baseweb="select"] > div,
             div[data-testid="stTextInputRootElement"] > div,
-            div[data-testid="stTextArea"] textarea {
-                border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            div[data-testid="stTextArea"] textarea,
+            div[data-testid="stNumberInput"] input {
+                border: 1px solid rgba(47, 48, 64, 0.18) !important;
                 box-shadow: none !important;
             }
 
-            input, textarea {
+            input,
+            textarea,
+            div[data-baseweb="select"] > div {
                 color: #FFFFFF !important;
                 background: #2F3040 !important;
                 font-size: 1rem !important;
@@ -150,10 +210,6 @@ def style_base_layout():
             div[data-baseweb="select"] * {
                 color: #FFFFFF !important;
                 font-size: 1rem !important;
-            }
-
-            div[data-baseweb="select"] > div {
-                background: #2F3040 !important;
             }
 
             div[data-baseweb="select"] svg,
@@ -232,6 +288,21 @@ def style_base_layout():
 
             [data-testid="stDataFrame"] *, [data-testid="stTable"] * {
                 color: var(--sat-text) !important;
+            }
+
+            @media (max-width: 768px) {
+                .stApp div[data-testid="stColumn"] {
+                    padding: 2rem !important;
+                    border-radius: 2.25rem !important;
+                }
+
+                .portal-card-copy {
+                    min-height: auto;
+                }
+
+                .portal-card-copy h3 {
+                    font-size: 1.45rem !important;
+                }
             }
         </style>
         """,
