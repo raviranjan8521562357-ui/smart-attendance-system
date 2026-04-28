@@ -3,11 +3,12 @@ import streamlit as st
 import segno
 import io
 
+from src.utils.urls import build_join_url
+
 
 @st.dialog("Share Class Link")
 def share_subject_dialog(subject_name, subject_code):
-    app_domain = "snapclass-main.streamlit.app"
-    join_url = f"{app_domain}/?join-code={subject_code}"
+    join_url = build_join_url(subject_code)
 
     st.header("Scan to Join")
 
