@@ -2,13 +2,10 @@ import streamlit as st
 
 
 def footer_home():
-    logo_url = "https://i.ibb.co/4r5X1FY/apnacollege.png"
-
     st.markdown(
-        f"""
+        """
         <div style="margin-top:2rem; display:flex; gap:6px; justify-content:center; align-items:center">
-            <p style="font-weight:700; color:#FFFFFF; margin:0;">Created with &#10084;&#65039; by</p>
-            <img src='{logo_url}' style='max-height:25px' />
+            <p style="font-weight:700; color:#FFFFFF; margin:0;">Created by Ravi Ranjan</p>
         </div>
         """,
         unsafe_allow_html=True,
@@ -16,13 +13,10 @@ def footer_home():
 
 
 def footer_dashboard():
-    logo_url = "https://i.ibb.co/4r5X1FY/apnacollege.png"
-
     st.markdown(
-        f"""
+        """
         <div style="margin-top:2rem; display:flex; gap:6px; justify-content:center; align-items:center">
-            <p style="font-weight:700; color:#111111; margin:0;">Created with &#10084;&#65039; by</p>
-            <img src='{logo_url}' style='max-height:25px' />
+            <p style="font-weight:700; color:#111111; margin:0;">Created by Ravi Ranjan</p>
         </div>
         """,
         unsafe_allow_html=True,
